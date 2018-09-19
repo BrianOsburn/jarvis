@@ -12,9 +12,9 @@ import logging.config
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
+
 #  Set the app name
 app = Flask(__name__, template_folder='../templates')
-
 
 #  Initialize Config File
 def init_config():

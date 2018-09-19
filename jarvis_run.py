@@ -1,7 +1,6 @@
-from jarvis import init_config, init_logging, init_db
-from jarvis import app
-#import time
-#from slackclient import SlackClient
+from jarvis import init_config, init_logging, init_db, app
+
+
 
 #  Init Configuration
 app_config = init_config()
@@ -13,6 +12,21 @@ logger = init_logging()
 logger.info("Setting up DB Connection")
 
 db = init_db(app, app_config)
+
+#  Get the routes
+import jarvis.routes.heartbeat
+import jarvis.routes.echo
+
+
+#  Init the bot
+from jarvis.bot_core import core
+
+jbot = core.Bot()
+slack = jbot.client
+
+
+import jarvis.routes.event_listener
+
 
 
 if __name__ == '__main__':
