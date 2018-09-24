@@ -26,7 +26,7 @@ slack = jbot.client
 
 
 import jarvis.routes.event_listener
-
+import jarvis.routes.adduser
 
 
 if __name__ == '__main__':
