@@ -16,16 +16,6 @@ db = init_db(app, app_config)
 #  Get the routes
 import jarvis.routes.heartbeat
 import jarvis.routes.echo
-
-
-#  Init the bot
-from jarvis.bot_core import core
-
-jbot = core.Bot()
-slack = jbot.client
-
-
-import jarvis.routes.event_listener
 import jarvis.routes.adduser
 
 
